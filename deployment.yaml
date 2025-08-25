@@ -16,17 +16,18 @@ spec:
         - name: matrimony-container
           image: alfinakash/matrimony:latest
           ports:
-            - containerPort: 3000   # change if your app runs on another port
+            - containerPort: 3000   
 ---
 apiVersion: v1
 kind: Service
 metadata:
   name: matrimony-service
 spec:
-  type: NodePort   # You can use LoadBalancer if on cloud
+  type: NodePort   
   selector:
     app: matrimony
   ports:
     - port: 80
       targetPort: 3000
       nodePort: 30080   # Access app on localhost:30080
+
