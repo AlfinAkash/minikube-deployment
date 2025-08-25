@@ -161,3 +161,12 @@ NAME                                   READY   STATUS    RESTARTS   AGE
 matrimony-deployment-fc5c447d9-8dkxs   1/1     Running   0          8s
 matrimony-deployment-fc5c447d9-drr2j   1/1     Running   0          25m
 PS D:\minikube>
+---------------------------------------------------------------------------------------------------------------------------------------------
+delete pods permanently
+PS D:\minikube> kubectl delete deployment matrimony-deployment
+deployment.apps "matrimony-deployment" deleted
+PS D:\minikube> kubectl get pods
+NAME                                   READY   STATUS        RESTARTS   AGE
+matrimony-deployment-fc5c447d9-7th54   1/1     Terminating   0          21s
+matrimony-deployment-fc5c447d9-kfsx4   1/1     Terminating   0          21s
+PS D:\minikube>
