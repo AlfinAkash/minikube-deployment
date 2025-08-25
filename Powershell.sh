@@ -140,3 +140,10 @@ PS D:\minikube> minikube service matrimony-service
 |-----------|-------------------|-------------|------------------------|
 🎉  Opening service default/matrimony-service in default browser...
 ❗  Because you are using a Docker driver on windows, the terminal needs to be open to run it.
+
+----------------------------------------------------------------------------------------------------------------------------------------
+PS D:\minikube> kubectl get pods
+NAME                                   READY   STATUS    RESTARTS   AGE
+matrimony-deployment-fc5c447d9-6cwmq   1/1     Running   0          12m
+matrimony-deployment-fc5c447d9-drr2j   1/1     Running   0          12m
+PS D:\minikube>
