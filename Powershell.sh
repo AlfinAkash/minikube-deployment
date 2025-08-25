@@ -147,3 +147,17 @@ NAME                                   READY   STATUS    RESTARTS   AGE
 matrimony-deployment-fc5c447d9-6cwmq   1/1     Running   0          12m
 matrimony-deployment-fc5c447d9-drr2j   1/1     Running   0          12m
 PS D:\minikube>
+--------------------------------------------------------------------------------------------------------------------------------------------
+# Autoscale
+
+PS D:\minikube> kubectl get pods
+NAME                                   READY   STATUS    RESTARTS   AGE
+matrimony-deployment-fc5c447d9-6cwmq   1/1     Running   0          24m
+matrimony-deployment-fc5c447d9-drr2j   1/1     Running   0          24m
+PS D:\minikube> kubectl delete pod matrimony-deployment-fc5c447d9-6cwmq
+pod "matrimony-deployment-fc5c447d9-6cwmq" deleted
+PS D:\minikube> kubectl get pods
+NAME                                   READY   STATUS    RESTARTS   AGE
+matrimony-deployment-fc5c447d9-8dkxs   1/1     Running   0          8s
+matrimony-deployment-fc5c447d9-drr2j   1/1     Running   0          25m
+PS D:\minikube>
