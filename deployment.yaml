@@ -31,4 +31,4 @@ spec:
       targetPort: 3000
       nodePort: 30080   
 
-
+# just like that for redis
